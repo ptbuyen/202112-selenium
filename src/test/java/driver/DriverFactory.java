@@ -26,7 +26,7 @@ public class DriverFactory {
 
         // Open a webpage
         WebDriver driver = new ChromeDriver(chromeOptions); // Start WebDriver Server | Chrome Driver ---> Chrome Browser
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         return driver;
     }
 }
