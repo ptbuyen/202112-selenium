@@ -1,6 +1,7 @@
 package test.global;
 
 import driver.DriverFactory;
+import models.components.global.header.HeaderComponent;
 import models.pages.HomePage;
 import models.pages.RegisterPage;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +11,7 @@ public class HeaderTest implements Urls {
 
     public static void main(String[] args) {
         testHomepageHeader();
-        testRegisterPageHeader();
+//        testRegisterPageHeader();
     }
 
     private static void testHomepageHeader() {
@@ -19,9 +20,11 @@ public class HeaderTest implements Urls {
 
         try {
             HomePage homePage = new HomePage(driver);
-            homePage.headerComp().searchInputElem().sendKeys("Laptop");
-            homePage.headerComp().searchInputBtn().click();
-            Thread.sleep(3000); // debug purpose only
+            HeaderComponent headerComponent = homePage.headerComp();
+            System.out.println("All links: " + headerComponent.allLinksNumber());
+            headerComponent.searchInputElem().sendKeys("Laptop");
+            headerComponent.searchInputBtn().click();
+//            Thread.sleep(3000); // debug purpose only
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
