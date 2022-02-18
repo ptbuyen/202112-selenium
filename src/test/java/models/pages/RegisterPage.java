@@ -11,8 +11,4 @@ public class RegisterPage extends BasePage{
         super(driver);
         this.driver = driver;
     }
-
-    public HeaderComponent headerComp() {
-        return findComponent(HeaderComponent.class, driver);
-    }
 }
