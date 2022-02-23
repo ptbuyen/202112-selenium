@@ -13,3 +13,5 @@ buildNumber.properties
 .mvn/wrapper/maven-wrapper.jar
 PPLTHDT/
 .MH_ds_mathang
+allure-*
+screenshots

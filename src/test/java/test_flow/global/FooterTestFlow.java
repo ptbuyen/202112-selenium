@@ -31,7 +31,12 @@ public class FooterTestFlow implements Urls {
 
         FooterComponent footerComponent = page.footerComponent();
         verifyInformationColumn(footerComponent);
-        verifyCustomerColumn(footerComponent);
+
+        // JUST AN EXAMPLE to handle different flow on pages
+        if (page instanceof HomePage){
+            System.out.println("Home Page | verifyCustomerColumn....");
+            verifyCustomerColumn(footerComponent);
+        }
         verifyAccountColumn(footerComponent);
         verifyFollowUsColumn(footerComponent);
 //        GenericTestFlow genericTestFlow = new GenericTestFlow(driver);

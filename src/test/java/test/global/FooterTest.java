@@ -5,7 +5,9 @@ import models.pages.CategoryPage;
 import models.pages.HomePage;
 import models.pages.RegisterPage;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import test.pom.BaseTest;
 import test_flow.global.FooterTestFlow;
 import url.Urls;
 
@@ -13,54 +15,31 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.List;
 
-public class FooterTest implements Urls {
+public class FooterTest extends BaseTest implements Urls {
 
     @Test
     public void testHomepageFooter() {
-        WebDriver driver = DriverFactory.getChromeDriver();
         driver.get(BASE_URL.concat(HOME_PAGE));
-
-        try {
-            FooterTestFlow footerTestFlow = new FooterTestFlow(driver);
-            footerTestFlow.verifyFooterComponent(HomePage.class);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            driver.quit();
-        }
+        FooterTestFlow footerTestFlow = new FooterTestFlow(driver);
+        footerTestFlow.verifyFooterComponent(HomePage.class);
     }
 
     @Test
     public void testRegisterPageFooter() {
-        WebDriver driver = DriverFactory.getChromeDriver();
         driver.get(BASE_URL.concat(REGISTER_PAGE));
 //        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 //        wait.until(ExpectedConditions.urlToBe(BASE_URL.concat(REGISTER_PAGE)));
-
-        try {
-            FooterTestFlow footerTestFlow = new FooterTestFlow(driver);
-            footerTestFlow.verifyFooterComponent(RegisterPage.class);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            driver.quit();
-        }
+        FooterTestFlow footerTestFlow = new FooterTestFlow(driver);
+        footerTestFlow.verifyFooterComponent(RegisterPage.class);
     }
 
     @Test
     public void testCategoryPageFooter() {
-        WebDriver driver = DriverFactory.getChromeDriver();
-        List<String> categorySlugs = Arrays.asList("/books","/computers","/electronics");
+        List<String> categorySlugs = Arrays.asList("/books", "/computers", "/electronics");
         String randomSlug = categorySlugs.get(new SecureRandom().nextInt(categorySlugs.size()));
         driver.get(BASE_URL.concat(randomSlug));
-
-        try {
-            FooterTestFlow footerTestFlow = new FooterTestFlow(driver);
-            footerTestFlow.verifyFooterComponent(CategoryPage.class);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            driver.quit();
-        }
+        Assert.fail();
+        FooterTestFlow footerTestFlow = new FooterTestFlow(driver);
+        footerTestFlow.verifyFooterComponent(CategoryPage.class);
     }
 }
