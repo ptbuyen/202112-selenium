@@ -13,11 +13,12 @@ public class CheapComputerComponent extends ComputerEssentialComponent {
 
     @Override
     public void selectProcessorType(String type) {
-        System.out.println("selectProcessorType | CheapComputerComponent");
+        selectCompSpecOption(type);
     }
 
     @Override
     public void selectRAMType(String type) {
-        System.out.println("selectRAMType | CheapComputerComponent");
+        selectCompSpecOption(type);
     }
+
 }
