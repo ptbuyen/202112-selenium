@@ -3,7 +3,13 @@
 <suite name="Regression">
     <test name="Global UI" >
         <classes>
-            <class name="test.global.FooterTest" />
+            <class name="test.order.CheapComputerBuyingTest"/>
+<!--            <class name="test.global.FooterTest" />-->
+        </classes>
+    </test>
+    <test name="Buying Computer">
+        <classes>
+            <class name="test.order.StandardComputerBuyingTest"/>
         </classes>
     </test>
 </suite>

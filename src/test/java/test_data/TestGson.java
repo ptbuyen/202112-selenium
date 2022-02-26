@@ -1,6 +1,12 @@
 package test_data;
 
 import com.google.gson.Gson;
+import utils.data.DataObjectBuilder;
+
+import javax.xml.crypto.Data;
+import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class TestGson {
 
@@ -16,17 +22,12 @@ public class TestGson {
     }
 
     private static void testFromJsonToObject() {
-        String userJSONObject = "{\n" +
-                "  \"name\": \"Teo\",\n" +
-                "  \"age\": \"18\"\n" +
-                "}";
+        String jsonFileLocation = "/src/test/resources/test-data/User.json";
+        User[] users = DataObjectBuilder.buildDataObjectFrom(jsonFileLocation, User[].class);
 
-        User user;
-        Gson gson = new Gson();
-
-        user = gson.fromJson(userJSONObject, User.class);
-        System.out.println(user);
-
-        System.out.println((user.getAge() + 1));
+        for (User user : users) {
+            System.out.println(user);
+        }
     }
+
 }
