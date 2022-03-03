@@ -2,6 +2,7 @@ package test_flow.order;
 
 import models.components.order.ComputerEssentialComponent;
 import models.pages.ComputerItemDetailsPage;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import test_data.ComputerDataObject;
 
@@ -23,8 +24,22 @@ public class OrderComputerFlow<T extends ComputerEssentialComponent> {
                 computerItemDetailsPage.computerEssentialComp(computerEssentialComponent);
         compEssentialComponent.selectProcessorType(computerDataObject.getProcessorType());
         compEssentialComponent.selectRAMType(computerDataObject.getRam());
-        System.out.println(compEssentialComponent.productPrice());
+        compEssentialComponent.selectHDD(computerDataObject.getHdd());
         compEssentialComponent.setProductQuantity(55);
+        if (computerDataObject.getOs() != null) {
+            compEssentialComponent.selectOS(computerDataObject.getOs());
+        }
+
         compEssentialComponent.clickOnAddToCartBtn();
+
+        // Wait until the item added to cart
+        compEssentialComponent.waitUntilItemAddedToCart();
+
+        // Scroll up the page
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("scroll(0, -document.body.scrollHeight);");
+
+        // Then navigate to shopping cart
+        computerItemDetailsPage.headerComp().clickOnShoppingCartLink();
     }
 }

@@ -1,6 +1,7 @@
 package test.pom;
 
 import driver.DriverFactory;
+import driver.DriverFactoryEx;
 import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -16,25 +17,30 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
+import java.util.*;
 
 public class BaseTest {
 
-    protected WebDriver driver;
+    // Thread spawn
+    private final static List<DriverFactoryEx> webdriverThreadPool = Collections.synchronizedList(new ArrayList<>());
+    private static ThreadLocal<DriverFactoryEx> driverThread;
 
-    public void initDriver() {
-        driver = DriverFactory.getChromeDriver();
+    protected WebDriver getDriver(){
+        return driverThread.get().getChromeDriver();
     }
 
     @BeforeTest(alwaysRun = true)
     public void beforeTest() {
-        initDriver();
+        driverThread = ThreadLocal.withInitial(() -> {
+           DriverFactoryEx webdriverThread = new DriverFactoryEx();
+           webdriverThreadPool.add(webdriverThread);
+           return webdriverThread;
+        });
     }
 
     @AfterTest(alwaysRun = true)
     public void afterTest() {
-        driver.quit();
+        driverThread.get().getChromeDriver().quit();
     }
 
     @AfterMethod(alwaysRun = true)
@@ -57,6 +63,7 @@ public class BaseTest {
             String fileLocation = System.getProperty("user.dir") + "/screenshots/" + methodName +  "_" + takenDate + ".png";
 
             // 2. Take screenshot
+            WebDriver driver = driverThread.get().getChromeDriver();
             File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
             try {
