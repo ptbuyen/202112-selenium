@@ -23,19 +23,19 @@ public class StandardComputerComponent extends ComputerEssentialComponent {
 
     @Step("Select processor type as {prefixValue}")
     @Override
-    public void selectProcessorType(String prefixValue) {
+    public String selectProcessorType(String prefixValue) {
         WebElement processorDropdownElem = component.findElements(productAttributeSel).get(PROCESSOR_DROPDOWN_INDEX);
-        selectOption(processorDropdownElem, prefixValue);
+        return selectOption(processorDropdownElem, prefixValue);
     }
 
     @Step("Select RAM type as {prefixValue}")
     @Override
-    public void selectRAMType(String prefixValue) {
+    public String selectRAMType(String prefixValue) {
         WebElement ramDropdownElem = component.findElements(productAttributeSel).get(RAM_DROPDOWN_INDEX);
-        selectOption(ramDropdownElem, prefixValue);
+        return selectOption(ramDropdownElem, prefixValue);
     }
 
-    private void selectOption(WebElement dropdownElem, String prefixValue) {
+    private String selectOption(WebElement dropdownElem, String prefixValue) {
         Select select = new Select(dropdownElem);
         List<WebElement> allOptions = select.getOptions();
         String fullStringOption = null;
@@ -53,5 +53,6 @@ public class StandardComputerComponent extends ComputerEssentialComponent {
         }
 
         select.selectByVisibleText(fullStringOption);
+        return fullStringOption;
     }
 }
