@@ -29,7 +29,7 @@ public class CheckoutPage extends BasePage {
         return findComponent(PaymentInformationComponent.class, driver);
     }
 
-    ConfirmOrderComponent confirmOrderComponent() {
+    public ConfirmOrderComponent confirmOrderComponent() {
         return findComponent(ConfirmOrderComponent.class, driver);
     }
 }

@@ -6,6 +6,8 @@ import models.ComponentCssSelector;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 @ComponentCssSelector(value = "#opc-billing")
@@ -86,10 +88,10 @@ public class BillingAddressComponent extends Component {
         component.findElement(phoneNoSel).sendKeys(phoneNo);
     }
 
-    @Step(value = "Click on continue button")
+    @Step(value = "Click on continue button at Billing Address")
     public void clickOnContinueBtn() {
-        component.findElement(continueBtnSel).click();
-
-        // TODO: wait until this process done
+        WebElement continueBtnElem = component.findElement(continueBtnSel);
+        continueBtnElem.click();
+        wait.until(ExpectedConditions.invisibilityOf(continueBtnElem));
     }
 }

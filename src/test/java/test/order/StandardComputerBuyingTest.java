@@ -8,6 +8,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import test.pom.BaseTest;
 import test_data.ComputerDataObject;
+import test_data.CreditCardType;
+import test_data.PaymentMethod;
 import test_flow.order.OrderComputerFlow;
 import url.Urls;
 import utils.data.DataObjectBuilder;
@@ -31,6 +33,12 @@ public class StandardComputerBuyingTest extends BaseTest implements Urls {
         orderComputerFlow.verifyShoppingCart(allItemPrices);
         orderComputerFlow.agreeTosAndCheckoutAsGuest();
         orderComputerFlow.inputBillingAddress();
+        orderComputerFlow.inputShippingAddress();
+        orderComputerFlow.selectShippingMethod();
+        orderComputerFlow.selectPaymentMethod(PaymentMethod.CREDIT_CARD);
+        orderComputerFlow.inputPaymentInfo(CreditCardType.DISCOVER);
+        orderComputerFlow.confirmOrder();
+        allItemPrices = 0;
     }
 
     @DataProvider
