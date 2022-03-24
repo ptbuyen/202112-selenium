@@ -11,6 +11,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import java.io.File;
 import java.io.InputStream;
@@ -24,13 +25,16 @@ public class BaseTest {
     // Thread spawn
     private final static List<DriverFactoryEx> webdriverThreadPool = Collections.synchronizedList(new ArrayList<>());
     private static ThreadLocal<DriverFactoryEx> driverThread;
+    private String browser;
 
     protected WebDriver getDriver(){
-        return driverThread.get().getChromeDriver();
+        return driverThread.get().getDriver(browser);
     }
 
-    @BeforeTest(alwaysRun = true)
-    public void beforeTest() {
+    @BeforeTest(alwaysRun = true, description = "Init browser session")
+    @Parameters({"browser"})
+    public void beforeTest(String browser) {
+        this.browser = browser;
         driverThread = ThreadLocal.withInitial(() -> {
            DriverFactoryEx webdriverThread = new DriverFactoryEx();
            webdriverThreadPool.add(webdriverThread);
@@ -40,7 +44,7 @@ public class BaseTest {
 
     @AfterTest(alwaysRun = true)
     public void afterTest() {
-        driverThread.get().getChromeDriver().quit();
+        driverThread.get().getDriver(browser).quit();
     }
 
     @AfterMethod(alwaysRun = true)
@@ -63,7 +67,7 @@ public class BaseTest {
             String fileLocation = System.getProperty("user.dir") + "/screenshots/" + methodName +  "_" + takenDate + ".png";
 
             // 2. Take screenshot
-            WebDriver driver = driverThread.get().getChromeDriver();
+            WebDriver driver = driverThread.get().getDriver(browser);
             File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
             try {
