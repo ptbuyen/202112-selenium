@@ -25,8 +25,10 @@ public class HeaderComponent extends Component {
     }
 
     @Step("Click on shopping cart link")
-    public void clickOnShoppingCartLink(){
-        component.findElement(shoppingCartLinkSel).click();
+    public void clickOnShoppingCartLink() {
+        WebElement shoppingCartLinkElem = findElement(shoppingCartLinkSel);
+        scrollUptoElement(shoppingCartLinkElem);
+        shoppingCartLinkElem.click();
     }
 
     public WebElement searchInputElem() {

@@ -1,17 +1,15 @@
 package models.pages;
 
-import org.openqa.selenium.By;
+import models.components.cart.CheckoutAsGuestComponent;
 import org.openqa.selenium.WebDriver;
 
 public class CheckoutOptionPage extends BasePage {
-
-    private final static By checkoutAsGuestBtnSel = By.cssSelector("input[class*=\"checkout-as-guest-button\"]");
 
     public CheckoutOptionPage(WebDriver driver) {
         super(driver);
     }
 
-    public void clickOnCheckoutAsGuestBtn() {
-        component.findElement(checkoutAsGuestBtnSel).click();
+    public CheckoutAsGuestComponent checkoutAsGuestComponent(){
+        return findComponent(CheckoutAsGuestComponent.class, driver);
     }
 }

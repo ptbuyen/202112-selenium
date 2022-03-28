@@ -1,8 +1,7 @@
 package models;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.lang.reflect.Constructor;
@@ -10,6 +9,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
 public class Component {
@@ -22,6 +22,26 @@ public class Component {
         this.driver = driver;
         this.component = component;
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+    }
+
+    public WebElement findElement(By by) {
+        WebElement element = null;
+        Exception exception = null;
+        try {
+            element = component.findElement(by);
+        } catch (Exception e) {
+            exception = e;
+            if (e instanceof NoSuchFrameException) {
+                element = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+            }
+        }
+        if (element == null)
+            throw new RuntimeException(exception.toString());
+        return element;
+    }
+
+    public List<WebElement> findElements(By by) {
+        return component.findElements(by);
     }
 
     public <T extends Component> T findComponent(Class<T> componentClass, WebDriver driver) {
@@ -40,7 +60,7 @@ public class Component {
         }
 
         String cssSelector = componentClass.getAnnotation(ComponentCssSelector.class).value();
-        List<WebElement> results = component.findElements(By.cssSelector(cssSelector));
+        List<WebElement> results = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(cssSelector)));
 
         return results.stream().map(webElement -> {
             try {
@@ -50,5 +70,17 @@ public class Component {
             }
             return null;
         }).collect(Collectors.toList());
+    }
+
+    public void scrollUptoElement(WebElement element) {
+        scrollIntoElement("false", element);
+    }
+
+    public void scrollDownToElement(WebElement element) {
+        scrollIntoElement("true", element);
+    }
+
+    private void scrollIntoElement(String position, WebElement element) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(" + position + ");", element);
     }
 }

@@ -3,6 +3,7 @@ package models.components.order;
 import io.qameta.allure.Step;
 import models.Component;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -40,10 +41,16 @@ public class BaseItemDetailsComponent extends Component {
     }
 
     @Step("Wait until item added to cart")
-    public void waitUntilItemAddedToCart(){
+    public void waitUntilItemAddedToCart() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         String successAddToCartString = "The product has been added to your ";
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(barNotificationContentSel, successAddToCartString));
+        try {
+            wait.until(ExpectedConditions.textToBePresentInElementLocated(barNotificationContentSel, successAddToCartString));
+        } catch (Exception e) {
+            if (e instanceof TimeoutException) {
+                clickOnAddToCartBtn();
+            }
+        }
     }
 
 }

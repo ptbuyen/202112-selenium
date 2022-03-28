@@ -88,7 +88,7 @@ public class BillingAddressComponent extends Component {
 
     @Step(value = "Click on continue button at Billing Address")
     public void clickOnContinueBtn() {
-        WebElement continueBtnElem = component.findElement(continueBtnSel);
+        WebElement continueBtnElem = findElement(continueBtnSel);
         continueBtnElem.click();
         wait.until(ExpectedConditions.invisibilityOf(continueBtnElem));
     }

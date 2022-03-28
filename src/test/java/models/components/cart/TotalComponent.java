@@ -44,7 +44,7 @@ public class TotalComponent extends Component {
         return this;
     }
 
-    @Step(value = "Click on Check out button")
+    @Step(value = "Click on Checkout button")
     public void clickOnCheckoutBtn(){
         component.findElement(checkoutBtnSel).click();
     }

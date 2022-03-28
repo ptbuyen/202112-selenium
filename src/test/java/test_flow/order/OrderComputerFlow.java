@@ -88,10 +88,6 @@ public class OrderComputerFlow<T extends ComputerEssentialComponent> {
         // Wait until the item added to cart
         compEssentialComponent.waitUntilItemAddedToCart();
 
-        // Scroll up the page
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("scroll(0, -document.body.scrollHeight);");
-
         // Then navigate to shopping cart
         computerItemDetailsPage.headerComp().clickOnShoppingCartLink();
         return totalItemPrice;
@@ -139,7 +135,9 @@ public class OrderComputerFlow<T extends ComputerEssentialComponent> {
     public void agreeTosAndCheckoutAsGuest() {
         ShoppingCartPage shoppingCartPage = new ShoppingCartPage(driver);
         shoppingCartPage.totalComponent().agreeTOS().clickOnCheckoutBtn();
-        new CheckoutOptionPage(driver).clickOnCheckoutAsGuestBtn();
+
+        CheckoutOptionPage checkoutOptionPage = new CheckoutOptionPage(driver);
+        checkoutOptionPage.checkoutAsGuestComponent().clickOnCheckoutAsGuestBtn();
     }
 
     public void inputBillingAddress() {
