@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="6" ignored="0" total="24" passed="17">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Regression" duration-ms="69048" started-at="2022-04-02T11:21:27 ICT" finished-at="2022-04-02T11:22:36 ICT">
+    <groups>
+    </groups>
+    <test name="Group 3" duration-ms="25032" started-at="2022-04-02T11:21:27 ICT" finished-at="2022-04-02T11:21:52 ICT">
+      <class name="test.pages.HomePage">
+        <test-method status="PASS" signature="testRecentlyViewProduct()[pri:0, instance:test.pages.HomePage@3cc2931c]" name="testRecentlyViewProduct" duration-ms="0" started-at="2022-04-02T11:21:52 ICT" finished-at="2022-04-02T11:21:52 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRecentlyViewProduct -->
+      </class> <!-- test.pages.HomePage -->
+      <class name="test.global.FooterTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:test.global.FooterTest@20d28811]" name="beforeTest" is-config="true" duration-ms="15" started-at="2022-04-02T11:21:27 ICT" description="Init browser session" finished-at="2022-04-02T11:21:27 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="FAIL" signature="testCategoryPageFooter()[pri:0, instance:test.global.FooterTest@20d28811]" name="testCategoryPageFooter" duration-ms="12998" started-at="2022-04-02T11:21:27 ICT" finished-at="2022-04-02T11:21:40 ICT">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.fail(Assert.java:115)
+at test.global.FooterTest.testCategoryPageFooter(FooterTest.java:43)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCategoryPageFooter -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.global.FooterTest@20d28811]" name="afterMethod" is-config="true" duration-ms="445" started-at="2022-04-02T11:21:40 ICT" finished-at="2022-04-02T11:21:40 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCategoryPageFooter status=FAILURE method=FooterTest.testCategoryPageFooter()[pri:0, instance:test.global.FooterTest@20d28811] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testHomepageFooter()[pri:0, instance:test.global.FooterTest@20d28811]" name="testHomepageFooter" duration-ms="8143" started-at="2022-04-02T11:21:40 ICT" finished-at="2022-04-02T11:21:48 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHomepageFooter -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.global.FooterTest@20d28811]" name="afterMethod" is-config="true" duration-ms="0" started-at="2022-04-02T11:21:48 ICT" finished-at="2022-04-02T11:21:48 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testHomepageFooter status=SUCCESS method=FooterTest.testHomepageFooter()[pri:0, instance:test.global.FooterTest@20d28811] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testRegisterPageFooter()[pri:0, instance:test.global.FooterTest@20d28811]" name="testRegisterPageFooter" duration-ms="3283" started-at="2022-04-02T11:21:48 ICT" finished-at="2022-04-02T11:21:52 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterPageFooter -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.global.FooterTest@20d28811]" name="afterMethod" is-config="true" duration-ms="1" started-at="2022-04-02T11:21:52 ICT" finished-at="2022-04-02T11:21:52 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testRegisterPageFooter status=SUCCESS method=FooterTest.testRegisterPageFooter()[pri:0, instance:test.global.FooterTest@20d28811] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.global.FooterTest@20d28811]" name="afterTest" is-config="true" duration-ms="104" started-at="2022-04-02T11:21:52 ICT" finished-at="2022-04-02T11:21:52 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.global.FooterTest -->
+    </test> <!-- Group 3 -->
+    <test name="Group 4" duration-ms="44406" started-at="2022-04-02T11:21:27 ICT" finished-at="2022-04-02T11:22:11 ICT">
+      <class name="test.global.FooterTestCopy">
+        <test-method status="FAIL" signature="importantMethod()[pri:0, instance:test.global.FooterTestCopy@2b6faea6]" name="importantMethod" duration-ms="70" started-at="2022-04-02T11:21:27 ICT" finished-at="2022-04-02T11:21:27 ICT">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.fail(Assert.java:115)
+at test.global.FooterTestCopy.importantMethod(FooterTestCopy.java:21)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- importantMethod -->
+        <test-method status="SKIP" signature="anotherTestMethodCopy()[pri:0, instance:test.global.FooterTestCopy@2b6faea6]" name="anotherTestMethodCopy" duration-ms="1" started-at="2022-04-02T11:21:27 ICT" depends-on-methods="test.global.FooterTestCopy.importantMethod" finished-at="2022-04-02T11:21:27 ICT">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method test.global.FooterTestCopy.anotherTestMethodCopy() on instance test.global.FooterTestCopy@2b6faea6 depends on not successfully finished methods 
+[test.global.FooterTestCopy.importantMethod() on instance test.global.FooterTestCopy@2b6faea6]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method test.global.FooterTestCopy.anotherTestMethodCopy() on instance test.global.FooterTestCopy@2b6faea6 depends on not successfully finished methods 
+[test.global.FooterTestCopy.importantMethod() on instance test.global.FooterTestCopy@2b6faea6]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:149)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- anotherTestMethodCopy -->
+        <test-method status="PASS" signature="testHomepageFooterCopy()[pri:0, instance:test.global.FooterTestCopy@2b6faea6]" name="testHomepageFooterCopy" duration-ms="0" started-at="2022-04-02T11:22:11 ICT" finished-at="2022-04-02T11:22:11 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHomepageFooterCopy -->
+      </class> <!-- test.global.FooterTestCopy -->
+      <class name="test.global.HeaderTest">
+        <test-method status="PASS" signature="testCategoryPageHeader()[pri:0, instance:test.global.HeaderTest@778d1062]" name="testCategoryPageHeader" duration-ms="11857" started-at="2022-04-02T11:21:27 ICT" finished-at="2022-04-02T11:21:39 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCategoryPageHeader -->
+        <test-method status="PASS" signature="testHomepageHeader()[pri:0, instance:test.global.HeaderTest@778d1062]" name="testHomepageHeader" duration-ms="9014" started-at="2022-04-02T11:21:39 ICT" finished-at="2022-04-02T11:21:48 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHomepageHeader -->
+        <test-method status="PASS" signature="testHomepageHeader_()[pri:0, instance:test.global.HeaderTest@778d1062]" name="testHomepageHeader_" duration-ms="9122" started-at="2022-04-02T11:21:48 ICT" finished-at="2022-04-02T11:21:57 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHomepageHeader_ -->
+        <test-method status="PASS" signature="testRegisterPageHeader()[pri:0, instance:test.global.HeaderTest@778d1062]" name="testRegisterPageHeader" duration-ms="5360" started-at="2022-04-02T11:21:57 ICT" finished-at="2022-04-02T11:22:02 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterPageHeader -->
+        <test-method status="PASS" signature="testRegisterPageHeader_()[pri:0, instance:test.global.HeaderTest@778d1062]" name="testRegisterPageHeader_" duration-ms="8818" started-at="2022-04-02T11:22:02 ICT" finished-at="2022-04-02T11:22:11 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterPageHeader_ -->
+      </class> <!-- test.global.HeaderTest -->
+      <class name="test.global.TestNGAssertionTypes">
+        <test-method status="FAIL" signature="testHardAssertion()[pri:0, instance:test.global.TestNGAssertionTypes@670002]" name="testHardAssertion" duration-ms="19" started-at="2022-04-02T11:22:11 ICT" finished-at="2022-04-02T11:22:11 ICT">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[ERR] Now 1 == 2 expected [2] but found [1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [ERR] Now 1 == 2 expected [2] but found [1]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:1240)
+at test.global.TestNGAssertionTypes.testHardAssertion(TestNGAssertionTypes.java:12)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHardAssertion -->
+        <test-method status="FAIL" signature="testSoftAssertion()[pri:0, instance:test.global.TestNGAssertionTypes@670002]" name="testSoftAssertion" duration-ms="4" started-at="2022-04-02T11:22:11 ICT" finished-at="2022-04-02T11:22:11 ICT">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+[ERR] Now 1 == 2 expected [2] but found [1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+[ERR] Now 1 == 2 expected [2] but found [1]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at test.global.TestNGAssertionTypes.testSoftAssertion(TestNGAssertionTypes.java:24)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSoftAssertion -->
+      </class> <!-- test.global.TestNGAssertionTypes -->
+    </test> <!-- Group 4 -->
+    <test name="Group 2" duration-ms="67833" started-at="2022-04-02T11:21:27 ICT" finished-at="2022-04-02T11:22:34 ICT">
+      <class name="test.testng_dataprovider.TestUserData">
+        <test-method status="PASS" signature="testUserDataCollection(test_data.User)[pri:0, instance:test.testng_dataprovider.TestUserData@3d121db3]" name="testUserDataCollection" duration-ms="2" started-at="2022-04-02T11:22:34 ICT" data-provider="userData" finished-at="2022-04-02T11:22:34 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User{name='Teo', age=18}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserDataCollection -->
+        <test-method status="FAIL" signature="testUserDataCollection(test_data.User)[pri:0, instance:test.testng_dataprovider.TestUserData@3d121db3]" name="testUserDataCollection" duration-ms="1" started-at="2022-04-02T11:22:34 ICT" data-provider="userData" finished-at="2022-04-02T11:22:34 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User{name='ti', age=19}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[ERR] name is not started with T expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [ERR] name is not started with T expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at test.testng_dataprovider.TestUserData.testUserDataCollection(TestUserData.java:13)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserDataCollection -->
+        <test-method status="PASS" signature="testUserDataCollection(test_data.User)[pri:0, instance:test.testng_dataprovider.TestUserData@3d121db3]" name="testUserDataCollection" duration-ms="0" started-at="2022-04-02T11:22:34 ICT" data-provider="userData" finished-at="2022-04-02T11:22:34 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User{name='Thao', age=20}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserDataCollection -->
+      </class> <!-- test.testng_dataprovider.TestUserData -->
+      <class name="test.order.CheapComputerBuyingTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:test.order.CheapComputerBuyingTest@78e94dcf]" name="beforeTest" is-config="true" duration-ms="16" started-at="2022-04-02T11:21:27 ICT" description="Init browser session" finished-at="2022-04-02T11:21:27 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="testCheapCompBuying(test_data.ComputerDataObject)[pri:0, instance:test.order.CheapComputerBuyingTest@78e94dcf]" name="testCheapCompBuying" duration-ms="36608" started-at="2022-04-02T11:21:27 ICT" description="Buying Cheap Computer" data-provider="cheapComputerDataSet" finished-at="2022-04-02T11:22:03 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test_data.ComputerDataObject@1105c039]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheapCompBuying -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.order.CheapComputerBuyingTest@78e94dcf]" name="afterMethod" is-config="true" duration-ms="1" started-at="2022-04-02T11:22:03 ICT" finished-at="2022-04-02T11:22:03 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCheapCompBuying status=SUCCESS method=CheapComputerBuyingTest.testCheapCompBuying(test_data.ComputerDataObject)[pri:0, instance:test.order.CheapComputerBuyingTest@78e94dcf] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testCheapCompBuying(test_data.ComputerDataObject)[pri:0, instance:test.order.CheapComputerBuyingTest@78e94dcf]" name="testCheapCompBuying" duration-ms="16878" started-at="2022-04-02T11:22:03 ICT" description="Buying Cheap Computer" data-provider="cheapComputerDataSet" finished-at="2022-04-02T11:22:20 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test_data.ComputerDataObject@39c39895]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheapCompBuying -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.order.CheapComputerBuyingTest@78e94dcf]" name="afterMethod" is-config="true" duration-ms="1" started-at="2022-04-02T11:22:20 ICT" finished-at="2022-04-02T11:22:20 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCheapCompBuying status=SUCCESS method=CheapComputerBuyingTest.testCheapCompBuying(test_data.ComputerDataObject)[pri:0, instance:test.order.CheapComputerBuyingTest@78e94dcf] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testCheapCompBuying(test_data.ComputerDataObject)[pri:0, instance:test.order.CheapComputerBuyingTest@78e94dcf]" name="testCheapCompBuying" duration-ms="13852" started-at="2022-04-02T11:22:20 ICT" description="Buying Cheap Computer" data-provider="cheapComputerDataSet" finished-at="2022-04-02T11:22:34 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test_data.ComputerDataObject@602497af]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheapCompBuying -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.order.CheapComputerBuyingTest@78e94dcf]" name="afterMethod" is-config="true" duration-ms="1" started-at="2022-04-02T11:22:34 ICT" finished-at="2022-04-02T11:22:34 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCheapCompBuying status=SUCCESS method=CheapComputerBuyingTest.testCheapCompBuying(test_data.ComputerDataObject)[pri:0, instance:test.order.CheapComputerBuyingTest@78e94dcf] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="FAIL" signature="testSomething()[pri:0, instance:test.order.CheapComputerBuyingTest@78e94dcf]" name="testSomething" duration-ms="11" started-at="2022-04-02T11:22:34 ICT" finished-at="2022-04-02T11:22:34 ICT">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Failed by something]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Failed by something
+at org.testng.Assert.fail(Assert.java:110)
+at test.order.CheapComputerBuyingTest.testSomething(CheapComputerBuyingTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSomething -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.order.CheapComputerBuyingTest@78e94dcf]" name="afterMethod" is-config="true" duration-ms="208" started-at="2022-04-02T11:22:34 ICT" finished-at="2022-04-02T11:22:34 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSomething status=FAILURE method=CheapComputerBuyingTest.testSomething()[pri:0, instance:test.order.CheapComputerBuyingTest@78e94dcf] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.order.CheapComputerBuyingTest@78e94dcf]" name="afterTest" is-config="true" duration-ms="164" started-at="2022-04-02T11:22:34 ICT" finished-at="2022-04-02T11:22:34 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.order.CheapComputerBuyingTest -->
+    </test> <!-- Group 2 -->
+    <test name="Group 1" duration-ms="69047" started-at="2022-04-02T11:21:27 ICT" finished-at="2022-04-02T11:22:36 ICT">
+      <class name="test.order.StandardComputerBuyingTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:test.order.StandardComputerBuyingTest@6193932a]" name="beforeTest" is-config="true" duration-ms="15" started-at="2022-04-02T11:21:27 ICT" description="Init browser session" finished-at="2022-04-02T11:21:27 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="testStandardCompBuying(test_data.ComputerDataObject)[pri:0, instance:test.order.StandardComputerBuyingTest@6193932a]" name="testStandardCompBuying" duration-ms="36757" started-at="2022-04-02T11:21:27 ICT" description="Buying Standard Computer" data-provider="standardCompsDataSet" finished-at="2022-04-02T11:22:03 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test_data.ComputerDataObject@44a611b7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStandardCompBuying -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.order.StandardComputerBuyingTest@6193932a]" name="afterMethod" is-config="true" duration-ms="0" started-at="2022-04-02T11:22:03 ICT" finished-at="2022-04-02T11:22:03 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testStandardCompBuying status=SUCCESS method=StandardComputerBuyingTest.testStandardCompBuying(test_data.ComputerDataObject)[pri:0, instance:test.order.StandardComputerBuyingTest@6193932a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testStandardCompBuying(test_data.ComputerDataObject)[pri:0, instance:test.order.StandardComputerBuyingTest@6193932a]" name="testStandardCompBuying" duration-ms="16731" started-at="2022-04-02T11:22:03 ICT" description="Buying Standard Computer" data-provider="standardCompsDataSet" finished-at="2022-04-02T11:22:20 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test_data.ComputerDataObject@39a32d35]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStandardCompBuying -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.order.StandardComputerBuyingTest@6193932a]" name="afterMethod" is-config="true" duration-ms="1" started-at="2022-04-02T11:22:20 ICT" finished-at="2022-04-02T11:22:20 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testStandardCompBuying status=SUCCESS method=StandardComputerBuyingTest.testStandardCompBuying(test_data.ComputerDataObject)[pri:0, instance:test.order.StandardComputerBuyingTest@6193932a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testStandardCompBuying(test_data.ComputerDataObject)[pri:0, instance:test.order.StandardComputerBuyingTest@6193932a]" name="testStandardCompBuying" duration-ms="15340" started-at="2022-04-02T11:22:20 ICT" description="Buying Standard Computer" data-provider="standardCompsDataSet" finished-at="2022-04-02T11:22:36 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test_data.ComputerDataObject@ede11a0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStandardCompBuying -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.order.StandardComputerBuyingTest@6193932a]" name="afterMethod" is-config="true" duration-ms="0" started-at="2022-04-02T11:22:36 ICT" finished-at="2022-04-02T11:22:36 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testStandardCompBuying status=SUCCESS method=StandardComputerBuyingTest.testStandardCompBuying(test_data.ComputerDataObject)[pri:0, instance:test.order.StandardComputerBuyingTest@6193932a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.order.StandardComputerBuyingTest@6193932a]" name="afterTest" is-config="true" duration-ms="121" started-at="2022-04-02T11:22:36 ICT" finished-at="2022-04-02T11:22:36 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.order.StandardComputerBuyingTest -->
+    </test> <!-- Group 1 -->
+  </suite> <!-- Regression -->
+</testng-results>
